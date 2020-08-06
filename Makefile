@@ -54,7 +54,7 @@ hsdep/libHShsdep-0.1.a: hsdep/HsDep.o
 hsdep/libHShsdep-0.1-ghc8.8.3.so: hsdep/HsDep.dyn_o
 	ghc -shared -dynamic -o hsdep/libHShsdep-0.1-ghc8.8.3.so hsdep/HsDep.dyn_o
 
-hsdep/HsDep.dyn_hi hsdep/HsDep.dyn_o hsdep/HsDep.hi hsdep/HsDep.o:
+hsdep/HsDep.dyn_hi hsdep/HsDep.dyn_o hsdep/HsDep.hi hsdep/HsDep.o: hsdep/HsDep.hs
 	ghc -c -dynamic-too -this-unit-id hsdep-0.1 hsdep/HsDep.hs -dynhisuf dyn_hi -dynosuf dyn_o
 
 hsdepth/pkgdb:
